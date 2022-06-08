@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="tablet.css">
+    <link rel="stylesheet" media="screnn and (max-width:530px)" href="phone.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background:url('workcode.jpg') no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.headings{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    transition: .6s ease;
+}
+.btn hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+    font-weight: bold;
+}
+
+/* About Section */
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 575px;
+    height: 400px;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Section */
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    align-items: center;
+    padding: 20px;
+
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.gallery img{
+    width: 360px;
+    height: 240px;
+    margin: 10px;
+}
+
+/* Services Section */
+#services{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top, rgb(255,45,45) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+.box:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(255,45,45);
+}
+.box img{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    padding: 10px;
+}
+
+/* Contact Section */
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+#msg{
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 10%;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Conatct Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">I AM <br> B MURARI</h1>
+            <button class="btn">
+                Hire Me
+            </button>
+        </div>
+    </section>
+
+    <section id="about">
+        <div id="pic">
+            <h1 class="headings">ABOUT ME</h1>
+            <img src="<a href="https://ibb.co/84853XN"><img src="https://i.ibb.co/cXTF5xk/working.jpg" alt="working" border="0"></a>" alt="">
+            <div id="intro">
+                <h2>B MURARi</h2>
+                <p> MY NAME IS MURARI . I AM AN EXPERT IN WEB DEVELOPING AND WEB
+                    DESIGNING AND IN MANY PROGRAMMING LANGAUGES LIKE PYTHON , 
+                    JAVA , C++ . I HAVE COMPLETED MY GRADUATION IN CSE IN VIT AP . 
+                    I HAVE DONE MY MASTERS IN WEB DEVELOPMENT IN IIT BOMBAY . 
+                    I HAVE ALSO DONE SPECIALIZATION IN PROGRAMMING LANGUAGES
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h1 class="headings">PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="<a href="https://ibb.co/YLQtS2p"><img src="https://i.ibb.co/RDbCK2z/image1.jpg" alt="image1" border="0"></a>" alt="">
+            <img src="<a href="https://ibb.co/MCX2L4R"><img src="https://i.ibb.co/pLm0p83/image2.jpg" alt="image2" border="0"></a>" alt="">
+            <img src="<a href="https://imgbb.com/"><img src="https://i.ibb.co/Z1BWnnT/image3.jpg" alt="image3" border="0"></a>" alt="">
+            <img src="<a href="https://ibb.co/djmcDwt"><img src="https://i.ibb.co/zQ65ZTF/image4.jpg" alt="image4" border="0"></a>" alt="">
+            <img src="<a href="https://ibb.co/MRs49YY"><img src="https://i.ibb.co/fC25Qhh/image11.jpg" alt="image11" border="0"></a>" alt="">
+            <img src="<a href="https://ibb.co/VMFdvtL"><img src="https://i.ibb.co/JrYNzKc/image22.jpg" alt="image22" border="0"></a>" alt="">
+        </div>
+    </section>
+
+    <section id="services">
+        <h1 class="headings">SERVICES</h1>
+        <div class="row">
+            <div class="box">
+                <img src="<a href="https://imgbb.com/"><img src="https://i.ibb.co/yhj0LYT/services.png" alt="services" border="0"></a>" alt="">
+                <h1 class="headings">Website Design</h1>
+                <p> WEBSITE DESIGNING IS A MULTISKILL TASK . YOU NEED 
+                    TO HAVE SKILL AND PATIENCE TO ACHIEVE THE BEST IN IT 
+                    ALTHOUGH IT IS NOT A TOUGH SKILL IT ISNT A EASY ONE ALSO.
+                </p>
+            </div>
+            <div class="box">
+                <img src="<a href="https://imgbb.com/"><img src="https://i.ibb.co/yhj0LYT/services.png" alt="services" border="0"></a>" alt="">
+                <h1 class="headings">UX/UI <br> Design</h1>
+                <p>UX , UI DESIGNING IS A MULTISKILL TASK . YOU NEED 
+                    TO HAVE SKILL AND PATIENCE TO ACHIEVE THE BEST IN IT 
+                    ALTHOUGH IT IS NOT A TOUGH SKILL IT ISNT A EASY ONE ALSO.
+                 </p>
+            </div>
+            <div class="box">
+                <img src="<a href="https://imgbb.com/"><img src="https://i.ibb.co/yhj0LYT/services.png" alt="services" border="0"></a>" alt="">
+                <h1 class="headings">Digital Marketing</h1>
+                <p>DIGITAL MARKETING HAS BECOME ON OF THE MAIN IMPORTANT
+                    THINGS IN MARKETING SECTION . AS WE ARE PROGRESSING TO
+                    DIGITAL LIFE , DIGITAL MARKETING HAS BECOME THE LEAD 
+                    MARKETING TECHNIQUE
+                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="headings">CONTACT</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name">
+            <input type="email" name="email" class="input" placeholder="Enter your email">
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter your message"></textarea>
+            <input type="submit" value="SEND" id="send">
+        </form>
+    </section>
+</body>
+</html>
